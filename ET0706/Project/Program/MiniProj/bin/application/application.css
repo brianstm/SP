@@ -1,0 +1,11 @@
+.text-field {
+	-fx-border-color: transparent;
+	-fx-background-color: #f4f8f7;
+	-fx-background-radius: 5;
+}
+
+.password-field {
+	-fx-border-color: transparent;
+	-fx-background-color: #f4f8f7;
+	-fx-background-radius: 5;
+}

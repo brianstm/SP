@@ -1,0 +1,27 @@
+.chart-legend { 
+	-fx-background-color: #ededed;
+}
+
+.data0.chart-pie { 
+	-fx-pie-color: #F47A1F;
+}
+
+.data1.chart-pie { 
+	-fx-pie-color: #FDBB2F;
+}
+
+.data2.chart-pie { 
+	-fx-pie-color: #377B2B;
+}
+
+.data3.chart-pie { 
+	-fx-pie-color: #7AC142;
+}
+
+.data4.chart-pie { 
+	-fx-pie-color: #007CC3;
+}
+
+.data5.chart-pie { 
+	-fx-pie-color: #00529B;
+}

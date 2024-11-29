@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM-Sans">
+    <meta http-equiv="refresh" content="10">
+    <style>
+        body{
+            background-image: url("img/bg.svg");
+            background-color: #1D2026;
+            height: 600px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; 
+            font-family: "DM Sans", sans-serif;
+        }
+        h1{
+            font-size: 44px;
+            margin: 0.5%;
+            color: #FFFFFF;
+        }
+        h4{
+            font-size: 24px;
+            color: #FFFFFF;
+            padding-top: 6%;
+            padding-bottom: 3%;
+            margin: 0%;
+        }
+        p{
+            font-size: 20px;
+            color: #8A94A7;
+            margin: 0.5%;
+            padding-left: 1%;
+        }
+        button{
+            color: #FFFFFF;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: "DM Sans", sans-serif;
+            font-size: 14px;
+            background-color: #242830;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 5px;
+        }
+        table.center {
+            margin-left: auto; 
+            margin-right: auto;
+        }
+        p.foot_left{
+            text-align: left;
+            font-size: 14px;
+            padding-top: 5%;
+        }
+        p.foot_right{
+            text-align: right;
+            font-size: 14px;
+            padding-top: 5%;
+        }
+        hr{
+            border: 1px solid #242830;
+            width: 70%;
+            align-self: center;
+        }
+    </style>
+    <script>
+        setTimeout(function(){
+            window.location.href = 'http://192.168.0.100/sensor/refresh?';
+        }, 5000);
+    </script>
+    </head>
+    <body>
+        <div style="padding-left: 15%; padding-top: 3%;">
+	        <h1 style="padding-bottom: 1%;">{{ title }}</h1>
+            <p>Door: {{ door_status }}</p>
+            <p>Rain: {{ rain_status }}</p>
+            <p>Temperature: {{ temp_status }}</p>
+            <p>Humidity: {{ hum_status }}</p>
+            <p>Light: {{ ldr_status }}</p>
+        </div>
+
+        <br><br><br><br>
+
+        <table class="center" style="width: 75%;">
+            <th>
+                <img src="fan.png" alt="fan" width = "50" height = "50">
+                <h4>Fan</h4>
+                <form action="/action_page.php" method="get">
+                    <button type="submit" formaction="/motor/off">Off</button>
+                    <button type="submit" formaction="/motor/on">On</button>
+                </form>
+            </th>
+            <th>
+                <img src="door_open.png" alt="door" width = "50" height = "50">
+                <h4>Unlock/lock Door</h4>
+                <form action="/action_page.php" method="get">
+                    <button type="submit" formaction="/door/lock">Lock</button>
+                    <button type="submit" formaction="/door/unlock">Unlock</button>
+                </form>
+            </th>
+            <th>
+                <img src="sensors.png" alt="sensors" width = "50" height = "50">
+                <h4>Sensors</h4>
+                <form action="/action_page.php" method="get">
+                    <button type="submit" formaction="/sensor/refresh">Read Sensors</button>
+                </form>
+            </th>
+        </table>
+        
+        <br><br>
+        <hr>
+
+        <footer>
+            <table class="center" style="width: 70%; padding-bottom: 1%">
+                <td>
+                    <p class="foot_left">ET0735 DevOps</p>
+                </td>
+                <td>
+                    <p class="foot_right">By: Brians, Jaden, Sameer</p>
+                </td>
+            </table>
+        </footer>     
+    </body>
+</html>
